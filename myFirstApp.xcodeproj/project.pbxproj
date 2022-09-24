@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		504F038528DEFE5000AAE8ED /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F038428DEFE5000AAE8ED /* ButtonView.swift */; };
+		504F038728DEFF7D00AAE8ED /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F038628DEFF7D00AAE8ED /* ChartView.swift */; };
 		50AA52A328DDB393003E9AF9 /* myFirstAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AA52A228DDB393003E9AF9 /* myFirstAppApp.swift */; };
 		50AA52A528DDB393003E9AF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AA52A428DDB393003E9AF9 /* ContentView.swift */; };
 		50AA52A728DDB393003E9AF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AA52A628DDB393003E9AF9 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		504F038428DEFE5000AAE8ED /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		504F038628DEFF7D00AAE8ED /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		50AA529F28DDB393003E9AF9 /* myFirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AA52A228DDB393003E9AF9 /* myFirstAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myFirstAppApp.swift; sourceTree = "<group>"; };
 		50AA52A428DDB393003E9AF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			children = (
 				50AA52A228DDB393003E9AF9 /* myFirstAppApp.swift */,
 				50AA52A428DDB393003E9AF9 /* ContentView.swift */,
+				504F038428DEFE5000AAE8ED /* ButtonView.swift */,
+				504F038628DEFF7D00AAE8ED /* ChartView.swift */,
 				50AA52A628DDB393003E9AF9 /* Assets.xcassets */,
 				50AA52A828DDB393003E9AF9 /* Preview Content */,
 			);
@@ -259,6 +265,8 @@
 			files = (
 				50AA52A528DDB393003E9AF9 /* ContentView.swift in Sources */,
 				50AA52A328DDB393003E9AF9 /* myFirstAppApp.swift in Sources */,
+				504F038528DEFE5000AAE8ED /* ButtonView.swift in Sources */,
+				504F038728DEFF7D00AAE8ED /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

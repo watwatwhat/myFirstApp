@@ -8,25 +8,56 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var displayText = "Status is displayed Here."
-    @State var tappedNum = 0
+    
+    
+    init() {
+//        -----navigation color settings
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.gray
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+//        -----
+    }
+    @State private var showingChartModal = false
+    
     var body: some View {
-        VStack {
-            Text(displayText)
-            
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello World form iOS app!")
-            Button("Tap me!", action: {
-                displayText = "A button is tapped."
-            })
-            Button("Increment!", action: {
-                tappedNum += 1
-                displayText = String(tappedNum)
-            })
-        }
-        .padding()
+        NavigationView(content: {
+            List {
+                NavigationLink(destination: ButtonView()) {
+                    Text("Button")
+                }
+                Button("chart") {
+                    self.showingChartModal.toggle()
+                }.sheet(isPresented: $showingChartModal) {
+                    ChartView()
+                }
+            }
+            .navigationTitle("What's in it?")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        print("options")
+                    }) {
+                        Image(systemName: "ellipsis.circle")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        print("右のボタンが押されたよ")
+                    }){
+                        HStack {
+                            Image(systemName: "trash")
+                            Text("削除")
+                        }
+                    }
+                }
+            }
+        })
+        
     }
 }
 
